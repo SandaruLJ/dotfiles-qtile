@@ -1,0 +1,76 @@
+configuration {
+  display-run: "";
+  display-drun: "";
+  display-window: "";
+  drun-display-format: "{icon} {name}";
+  window-format: "  {w}  {c}\t  {t}";
+  font: "Fira Sans 10";
+  modi: "window,run,drun";
+  show-icons: true;
+}
+
+* {
+  bg: #151515;
+  bg-alt: #232323;
+
+  fg: #FFFFFF;
+  fg-alt: #424242;
+  
+  background-color: @bg;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+element {
+  padding: 8;
+  orientation: horizontal;
+  text-color: @fg-alt;
+}
+
+element-text {
+  padding: 3 0 0;
+}
+
+element-icon {
+  size: 24;
+}
+
+element selected {
+  text-color: @fg;
+}
+
+entry {
+  background-color: @bg-alt;
+  padding: 8;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  background-color: @bg;
+  columns: 2;
+  lines: 8;
+}
+
+mainbox {
+  background-color: @bg;
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @bg-alt;
+  enabled: true;
+  font: "FontAwesome 16";
+  padding: 2 4 0 8;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+}
